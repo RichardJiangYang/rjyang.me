@@ -50,6 +50,10 @@ nav a.navItem {
     color: #415659;
 }
 
+nav a:hover {
+    opacity: 0.7;
+}
+
 main {
     text-align: center;
 }
@@ -83,10 +87,6 @@ ul {
 }
 
 .hamburgerMenu {
-    display: none;
-}
-
-.hamburgerX {
     display: none;
 }
 
@@ -372,4 +372,97 @@ ul {
     justify-content: space-around;
     flex-wrap: wrap;
     min-height: 300px;
+}
+
+.generalFooter {
+    border-top: 1px solid #CCDCE6;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.generalFooter a {
+    color: #415659;
+    text-decoration: none;
+}
+
+.generalFooter a:hover {
+    opacity: 0.7;
+}
+
+@media only screen and (max-width: 800px) {
+    .generalFooter {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .mobileFooter {
+        display: none;
+    }
+}
+
+.bottomlinklabel {
+    font-size: 25px;
+}
+
+.bottomLinkPic {
+    width: 20px;
+    height: 20px;
+    align-content: left;
+}
+
+.bottomlink {
+    border-top: 1px solid #CCDCE6;
+    text-align: center;
+}
+
+.bottomLinkToggle {
+    position: absolute;
+    top: +9999999px;
+    left: -9999px;
+}
+
+#jobSkillsMenu {
+    display: none;
+}
+
+#linkToggleJobSkills:checked ~ #jobSkillsMenu {
+    text-align: center;
+    display: inherit;
+}
+
+#languageMenu {
+    display: none;
+}
+
+#linkToggleLanguages:checked ~ #languageMenu {
+    text-align: center;
+    display: inherit;
+}
+
+#progLanguageMenu {
+    display: none;
+}
+
+#linkToggleProgLanguages:checked ~ #progLanguageMenu {
+    text-align: center;
+    display: inherit;
+}
+
+#miscSkillsMenu {
+    display: none;
+}
+
+#linkToggleMiscSkills:checked ~ #miscSkillsMenu {
+    text-align: center;
+    display: inherit;
+}
+
+.mobileFooter a {
+    color: #415659;
+    text-decoration: none;
+}
+
+.mobileFooter a:hover {
+    opacity: 0.7;
 }
