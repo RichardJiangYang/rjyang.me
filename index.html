@@ -3,142 +3,409 @@
 <html>
     <head>
         <title>rjyang.me</title>
-        <!-- <link rel="stylesheet" type="text/css" href="/style.css" /> -->
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css' />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     </head>
     <body>
         <nav>
+            <!-- adapted from https://css-tricks.com/the-checkbox-hack/ -->
+            <input type="checkbox" class="hamburgerToggle" id="hamburgerToggle-1">
             <ul> 
-                <li>
-                    <a href = #> RJ Yang </a>
-                </li>
-                <li>
-                    <a href = #> About </a>
-                </li>
-                <li>
-                    <a href = #> Blog </a>
-                </li>
-                <li>
-                    <a href = #> Contact </a>
-                </li>
+                <a class="logo" href=#> RJ (Richard Jiang) Yang </a>
+
+                <ul>
+                    <li class="hamburger">
+                        <label for="hamburgerToggle-1"> <img class="hamburgerMenuPic" src="media/hamburgerMenu.png"> </label>
+                    </li>
+                    <li class="regularMenu">
+                        <a class="navItem" href=#> Webwork </a>
+                    </li>
+                    <li class="regularMenu">
+                        <a class="navItem" href=#> Blog </a>
+                    </li>
+                    <li class="regularMenu">
+                        <a class="navItem" href=#> Contact </a>
+                    </li>
+                    </ul>
             </ul>
+            <div class="hamburgerMenu">
+                <div>
+                    <a class="hamburgerItem" href=#> Webwork </a>
+                </div>
+                <div>
+                    <a class="hamburgerItem" href=#> Blog </a>
+                </div>
+                <div>
+                    <a class="hamburgerItem" href=#> Contact </a>
+                </div>
+            </div>
         </nav>
 
         <main>
-            <h1>
-                Welcome to my webpage.<br>I'm RJ Yang and I like learning new things!
-            </h1>
+            <div class="welcome">
+                <h1 class="welcomeMessage">
+                    Welcome to my webpage.
+                    <br>
+                    I'm RJ Yang and I like learning new things!
+                </h1>
+                <br>
 
-            <div>
-                <input type="text" name="Resource Code">
-                <button type="button">Click here to request a resource</button>
-                <br>or<br>
-                <button type="button">Chick here to learn more about me!</button>
+                <input class = "resourceCode" type="text" name="Resource Code" placeholder="Resource Code">
+                <br>
+                <button type="button" class="learnMore">Request a resource!</button>
+                <br>
+                or
+                <br>
+                <br>
+
+                <a class="learnMore" href="#interestSection">Learn more about me!</a>
             </div>
 
-            <ul>
-                <li>
-                    Interests
-                </li>
-                <li>
-                    Tech
-                </li>
-                <li>
-                    Finance
-                </li>
-                <li>
-                    Retail
-                </li>
-                <li>
-                    Education
-                </li>
-            </ul>
+            <!-- <div class="sectionDivider"></div> -->
 
-            <ul> 
-                <li>
-                    Current Projects
-                </li>
-                <li>
-                    Online Retail
-                </li>
-                <li>
-                    Trade-skill Training Programs
-                </li>
-                <li>
-                    Asset Trading Algorithms
-                </li>
-            </ul>
+            <div id="interestSection" class="infoSubsection">
+                <div class="sectionHeader">
+                    My Interests
+                </div>
 
-            <ul> 
-                <li>
+                <div class="interest">
+                    <a id="tech" class="interestItem" href=#>
+                        >>Tech
+                    </a>
+                    <a id="finance" class="interestItem" href=#>
+                        >>Finance
+                    </a>
+                    <a id="retail" class="interestItem" href=#>
+                        >>Retail
+                    </a>
+                    <a id="education" class="interestItem" href=#>
+                        >>Education
+                    </a>
+                </div>
+
+                <div class="nextSection">
+                    <a class="learnMore" href="#currProjSection">Learn about my current projects!</a>
+                </div>
+            </div>
+
+            <!-- section divider to add a bit of space between sections -->
+            <div class="sectionDivider"></div>
+
+            <div id="currProjSection" class="infoSubsection"> 
+                <div class="sectionHeader">
+                    My Current Projects
+                </div>
+
+                <div id="currProjIcons">
+                    <div>
+                        <a href="#">
+                            <img id="currProjRetailImg" src="media/currProjRetail.png">
+                            <!-- https://pixabay.com/vectors/shopping-cart-shopping-icon-1105049/ -->
+                            <br>
+                            Online Retail
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img id="currProjTrainingImg" src="media/currProjTraining.png">
+                            <!-- old: https://pixabay.com/vectors/education-studying-university-icon-3617221/ -->
+                            <!-- https://pixabay.com/vectors/mathematical-calculator-icon-sign-3714907/ -->
+                            <br>
+                            Trade-skill Training Programs
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img id="currProjTradingImg" src="media/currProjTrading.png">
+                            <!-- https://pixabay.com/vectors/atm-using-bank-icon-finance-3632623/ -->
+                            <br>
+                            Asset Trading Algorithms
+                        </a>
+                    </div>
+                </div>
+                <div class="nextSection">
+                    <a class="learnMore" href="#educationSection">Learn about my academic history!</a>
+                </div>
+            </div>
+
+            <div id="educationSection" class="infoSubsection"> 
+                <div class="sectionHeader">
+                    My Education
+                </div>
+
+                I'm currently a Dartmouth Undergraduate Senior double majoring in Computer Engineering and Economics! Within Computer Engineering, I am interested in theory, specifically algorithms, numerical methods, and operations research techniques. In Economics, I am interested in financial markets and international trade.
+
+                <br>
+                <br>
+
+                <h1 class="educationSubsectionHeader">
                     Current Academic Activity
-                </li>
-                <li>
-                    Economics Thesis (Market Efficiency)
-                </li>
-                <li>
-                    Engineering Thesis (Decision Making)
-                </li>
-                <li>
-                    CompSci Course (Web Development)
-                </li>
-                <li>
-                    Econ Course (Development Economics)
-                </li>
-                <li>
-                    CompSci TA (Algorithms)
-                </li>
-            </ul>
+                </h1>
 
-            <ul> 
-                <li>
-                    Hobbies
-                </li>
-                <li>
-                    Weightlifting
-                </li>
-                <li>
-                    Triathlon
-                </li>
-                <li>
-                    Chess
-                </li>
-                <li>
-                    Competitive Algorithmic Programming
-                </li>
-                <li>
-                    Cooking
-                </li>
-            </ul>
+                <ul>
+                    <li>
+                        Economics Thesis (Market Efficiency)
+                    </li>
+                    <li>
+                        Engineering Thesis (Decision Making)
+                    </li>
+                    <li>
+                        Computer Science Course (Web Development - COSC52)
+                    </li>
+                    <li>
+                        Economics Course (Development Economics - ECON24)
+                    </li>
+                    <li>
+                        Computer Science TA (Algorithms)
+                    </li>
+                </ul>
 
-            <ul> 
-                <li>
+                <br>
+
+                <h1 class="educationSubsectionHeader">
+                    Past Courses Taken
+                </h1>
+
+                <div id="pastEducation">
+                    <ul>
+                        <li class="pastCoursesSubsectionHeader">
+                            Computer Engineering
+                        </li>
+                        <li>
+                            Numerical Methods - ENGS91
+                        </li>
+                        <li>
+                            Statistical Methods - ENGS93
+                        </li>
+                        <li>
+                            Fourier Transforms - ENGS92
+                        </li>
+                        <li>
+                            Operations Research - ENGS52
+                        </li>
+                        <li>
+                            Digital Electronics - ENGS31
+                        </li>
+                        <li>
+                            Probalistic Systems - ENGS27
+                        </li>
+                        <li>
+                            Distributed Systems - ENGS23
+                        </li>
+                        <li>
+                            Systems - ENGS22
+                        </li>
+                        <li>
+                            Algorithms - COSC31
+                        </li>
+                        <li>
+                            Computer Networks - COSC60
+                        </li>
+                        <li>
+                            Computer Architecture - COSC51
+                        </li>
+                        <li>
+                            Software Design/Implementation - COSC50
+                        </li>
+                        <li>
+                            Object-Oriented Programming - COSC10
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="pastCoursesSubsectionHeader">
+                            Economics
+                        </li>
+                        <li>
+                            Topics in Finance - ECON46
+                        </li>
+                        <li>
+                            International Trade - ECON39
+                        </li>
+                        <li>
+                            Theory of Finance - ECON36
+                        </li>
+                        <li>
+                            Open Macroeconomics - ECON29
+                        </li>
+                        <li>
+                            Financial Markets/Intermediaries - ECON26
+                        </li>
+                        <li>
+                            Macroeconomics - ECON22
+                        </li>
+                        <li>
+                            Microeconomics - ECON21
+                        </li>
+                        <li>
+                            Econometrics - ECON20
+                        </li>
+                        <li>
+                            Statistics - ECON10
+                        </li>
+                        <li>
+                            Intro to Economics - ECON1
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="pastCoursesSubsectionHeader">
+                            Distributive/Interest
+                        </li>
+                        <li>
+                            Linear Algebra - MATH22
+                        </li>
+                        <li>
+                            Multivar Calculus - MATH11
+                        </li>
+                        <li>
+                            Honors Physics I - PHYS15
+                        </li>
+                        <li>
+                            Renaissance Art - ARTH42
+                        </li>
+                        <li>
+                            Physics II - PHYS14
+                        </li>
+                        <li>
+                            Gene Expression/Inheritance - BIOL13
+                        </li>
+                        <li>
+                            Cell Structure/Function - BIOL12
+                        </li>
+                        <li>
+                            Chemistry II - CHEM6
+                        </li>
+                        <li>
+                            Hindus and Muslims in India - WRIT7
+                        </li>
+                        <li>
+                            International Politics - WRIT5
+                        </li>
+                        <li>
+                            Intermediate Modern Chinese - CHIN22
+                        </li>
+                        <li>
+                            Accelerated Intro Chinese - CHIN4
+                        </li>
+                    </ul>
+                </div>
+                <div class="nextSection">
+                    <a class="learnMore" href="#hobbiesSection">Learn about my hobbies!</a>
+                </div>
+            </div>
+
+            <!-- section divider to add a bit of space between sections -->
+            <div class="sectionDivider"></div>
+
+            <div id="hobbiesSection" class="infoSubsection"> 
+                <div class="sectionHeader">
+                    My Hobbies
+                </div>
+
+                <div class="hobbies">
+                    <a id="weightlifting" class="hobbyItem" href=#>
+                        Weightlifting
+                    </a>
+                    <a id="triathlon" class="hobbyItem" href=#>
+                        Triathlon
+                    </a>
+                    <a id="chess" class="hobbyItem" href=#>
+                        Chess
+                    </a>
+                    <a id="basketball" class="hobbyItem" href=#>
+                        Basketball
+                    </a>
+                    <a id="cooking" class="hobbyItem" href=#>
+                        Cooking
+                    </a>
+                    <a id="reading" class="hobbyItem" href=#>
+                        Reading
+                    </a>
+                </div>
+
+                <div class="nextSection">
+                    <a class="learnMore" href="#skillsSection">Learn about my skillset!</a>
+                </div>
+
+            </div>
+
+            <!-- section divider to add a bit of space between sections -->
+            <div class="sectionDivider"></div>
+
+            <div id="skillsSection" class="infoSubsection"> 
+                <div class="sectionHeader">
                     Skillset
-                </li>
-                <li>
-                    Algorithms
-                </li>
-                <li>
-                    Numerical Methods
-                </li>
-                <li>
-                    Operations Research
-                </li>
-                <li>
-                    Programming
-                </li>
-                <li>
-                    Statistics
-                </li>
-                <li>
-                    Trading
-                </li>
-                <li>
-                    Translation
-                </li>
-                <li>
-                    Teaching
-                </li>
-            </ul>
+                </div>
+
+                <div id="skills">
+                    <ul>
+                        <li class="skillsSubsectionHeader">
+                            Job-Related Skills
+                        </li>
+                        <li>
+                            Algorithms
+                        </li>
+                        <li>
+                            Numerical Methods
+                        </li>
+                        <li>
+                            Operations Research
+                        </li>
+                        <li>
+                            Statistics
+                        </li>
+                        <li>
+                            Trading
+                        </li>
+                        <li>
+                            Programming
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="skillsSubsectionHeader">
+                            Languages
+                        </li>
+                        <li>
+                            English - Fluent
+                        </li>
+                        <li>
+                            Chinese (Mandarin) - Fluent
+                        </li>
+                        <li>
+                            Japanese - Elementary
+                        </li>
+                        <li>
+                            Spanish - Elementary
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="skillsSubsectionHeader">
+                            Miscellaneous
+                        </li>
+                        <li>
+                            Excel
+                        </li>
+                        <li>
+                            Typing
+                        </li>
+                        <li>
+                            Translation
+                        </li>
+                        <li>
+                            Teaching/Tutoring
+                        </li>
+                        <li>
+                            Problem Solving
+                        </li>
+                        <li>
+                            Writing
+                        </li>
+                        <li>
+                            Entrepreneurship
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </main>
 
     </body>

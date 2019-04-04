@@ -1,5 +1,375 @@
-/* adapted from simpleanalytics.io */
+/* taken from cs52.me 4/2/19 lecture */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    background-color: rgba(240, 252, 255, 0.7);
+}
+body {
+    font-family: "Open Sans", sans-serif;
+}
 
-nav .brand {
-    background-color: #333;
+
+/* adapted from simpleanalytics.io */
+nav {
+    margin: 0px auto;
+    width: 100%;
+    border: none;
+}
+
+/* from simpleanalytics.io */
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav a {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav a.logo {
+    font-size: 25px;
+    color: #415659;
+    /* font-family: 'Cinzel', sans-serif; */
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a.navItem {
+    color: #415659;
+}
+
+main {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+@media only screen and (min-width: 640px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .regularMenu {
+        display: none;
+    }
+}
+
+
+/* adapted from https://css-tricks.com/the-checkbox-hack/ */
+.hamburgerToggle {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.hamburgerMenu {
+    display: none;
+}
+
+.hamburgerX {
+    display: none;
+}
+
+.hamburgerMenuPic {
+    width: 25px;
+    height: 25px;
+}
+
+.hamburgerToggle:checked ~ .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+}
+
+.hamburgerItem {
+    font-size: 20px;
+    color: #415659
+}
+
+.sectionHeader {
+    font-size: 24px;
+    height: 10vh;
+    min-height: 50px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.welcome {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: -15px 0;
+    min-height: 500px;
+}
+
+.welcomeMessage{
+    padding:20px;
+}
+
+.resourceCode {
+    width: 50%;
+    color: black;
+    border-color: black;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.resourceCode:hover {
+    width: 50%;
+    background-color: rgb(236, 162, 162);
+    cursor: pointer;
+}
+
+/* adapted from simpleanalytics.io */
+.learnMore {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Open Sans", sans-serif;
+    height: 50px;
+    padding: 0 2rem;
+    background: #FF4F64;
+    border: none;
+    color: white;
+    margin: 0;
+    padding: 0 1rem;
+    height: 40px;
+    width: auto;
+    overflow: visible;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: auto;
+}
+
+.learnMore:hover {
+    background: rgb(252, 130, 145);
+}
+
+.sectionDivider {
+    height: 25vh;
+}
+
+.infoSubsection {
+    min-height: 100vh;
+}
+
+.infoSubsection a {
+    text-decoration: none;
+}
+
+.interest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+    min-height: 400px;
+}
+
+.nextSection {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 50px;
+}
+
+.interestItem {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 8vh;
+    padding-bottom: 5vh;
+    float: bottom;
+    cursor: pointer;
+    text-decoration: none;
+    min-height: 100px;
+}
+
+.interestItem:hover {
+    opacity: 0.7;
+}
+
+#tech {
+    background-image: url("media/interestTech.jpg");
+    color: #fafafa;
+}
+/* "Photo by Alexandre Debiève on Unsplash" */
+
+#finance {
+    background-image: url("media/interestFinance.jpg");
+    color: black;
+}
+/* Photo by Hieu Vu Minh on Unsplash */
+
+#retail {
+    background-image: url("media/interestRetail.jpg");
+    color: #fafafa;
+}
+/* Photo by Clark Street Mercantile on Unsplash */
+
+#education {
+    background-image: url("media/interestEducation.jpg");
+    color: #fafafa;
+}
+/* Photo by Janko Ferlič on Unsplash */
+
+#currProjIcons a {
+    color: #415659;
+}
+
+#currProjIcons a:hover {
+    opacity: 0.7;
+}
+
+#currProjIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 300px;
+}
+
+#currProjRetailImg {
+    width: 200px;
+    height: 200px;
+}
+
+#currProjTrainingImg {
+    width: 200px;
+    height: 200px;
+}
+
+#currProjTradingImg {
+    width: 200px;
+    height: 200px;
+}
+
+.educationSubsectionHeader {
+    font-size: 20px;
+}
+
+.pastCoursesSubsectionHeader {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+#pastEducation {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 300px;
+}
+
+.hobbies {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hobbyItem {
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 300px;
+    height: 300px;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 142px;
+    float: bottom;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 150px;
+}
+
+.hobbyItem:hover {
+    opacity: 0.7;
+}
+
+
+#weightlifting {
+    background-image: url("media/hobbiesWeightlifting.jpeg");
+    color: white;
+}
+/* https://unsplash.com/photos/KcPmKh9cWlk */
+
+#triathlon {
+    background-image: url("media/hobbiesTriathlon.jpeg");
+    color: white;
+}
+/* https://unsplash.com/photos/mfCFuPfTtdU */
+
+#chess {
+    background-image: url("media/hobbiesChess.jpeg");
+    color: #fafafa;
+}
+/* https://unsplash.com/photos/6D1lESi9ssU */
+
+#basketball {
+    background-image: url("media/hobbiesBasketball.jpeg");
+    color: #fafafa;
+}
+/* https://unsplash.com/photos/UFIZodJgScQ */
+
+#cooking {
+    background-image: url("media/hobbiesCooking.jpeg");
+    color: #fafafa;
+}
+/* https://unsplash.com/photos/EzH46XCDQRY */
+
+#reading {
+    background-image: url("media/hobbiesReading.jpeg");
+    color: #fafafa;
+}
+/* https://unsplash.com/photos/9c_djeQTDyY */
+
+.skillsSubsectionHeader {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+#skills {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 300px;
 }
