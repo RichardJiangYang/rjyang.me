@@ -4,18 +4,20 @@ html {
 }
 *, *:before, *:after {
     box-sizing: inherit;
-    background-color: rgba(240, 252, 255, 0.7);
+    /* background-color: rgba(240, 252, 255, 0.7); */
 }
 body {
     font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
 
 /* adapted from simpleanalytics.io */
 nav {
     margin: 0px auto;
     width: 100%;
     border: none;
+    height: 35px;
 }
 
 /* from simpleanalytics.io */
@@ -29,11 +31,13 @@ nav ul {
     height: auto;
     flex-direction: row;
     justify-content: space-between;
+    background: none;
 }
 
 nav a {
     font-size: 20px;
     text-decoration: none;
+    background: none;
 }
 
 nav a.logo {
@@ -44,6 +48,7 @@ nav a.logo {
 
 nav li {
     margin: 0 10px;
+    background: none;
 }
 
 nav a.navItem {
@@ -100,12 +105,16 @@ ul {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
+}
 
+.hamburgerMenu a {
+    background: none;
 }
 
 .hamburgerItem {
     font-size: 20px;
-    color: #415659
+    color: #415659;
+    background: none;
 }
 
 .sectionHeader {
@@ -122,12 +131,16 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: -15px 0;
     min-height: 500px;
+    /* taken from cs52.me lab1 assignment page */
+    background-image: url("media/blueWallpaper.jpg");
+    background-size: cover;
+    /* margin-top: -35px; */
 }
 
 .welcomeMessage{
     padding:20px;
+    background: none;
 }
 
 .resourceCode {
@@ -137,6 +150,7 @@ ul {
     cursor: pointer;
     text-align: center;
     border-radius: 20px;
+    background: none;
 }
 
 .resourceCode:hover {
@@ -168,10 +182,18 @@ ul {
     align-items: center;
     justify-content: center;
     line-height: auto;
+    box-shadow: 0px 3px #888888;
+    outline: none;
 }
 
 .learnMore:hover {
     background: rgb(252, 130, 145);
+}
+
+.learnMore:active {
+    background: rgb(252, 130, 145);
+    box-shadow: none;
+    transform: translateY(3px);
 }
 
 .sectionDivider {
@@ -389,13 +411,13 @@ ul {
     opacity: 0.7;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 640px) {
     .generalFooter {
         display: none;
     }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 640px) {
     .mobileFooter {
         display: none;
     }
